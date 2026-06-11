@@ -1,0 +1,13 @@
+# Obsidian 缓存和临时文件
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/plugins/obsidian-git/data.json   # 如果用 obsidian-git 插件，其缓存
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 大文件/敏感文件（按需添加）
+*.mp4
+*.mov

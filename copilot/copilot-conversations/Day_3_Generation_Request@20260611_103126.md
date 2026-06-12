@@ -364,6 +364,16 @@ if __name__ == "__main__":
        print(f"User name: {user['name']}")
    ```
    假设 API 返回的 JSON 格式为：`{"id": 123, "name": "Alice", "email": "alice@example.com"}`
+   答：修改正       import httpx
+
+   def fetch_user(user_id: int) -> dict:
+       client = httpx.Client()
+       response = client.get(f"https://api.example.com/users"， params={"user_id":user_id})
+       return response.json()
+
+   if __name__ == "__main__":
+       user = fetch_user(123)
+       print(f"User name: {user['name']}")
 
 ---
 
@@ -372,11 +382,11 @@ if __name__ == "__main__":
 请你明天把下面这段填好发给我：
 
 【Day 3 学习反馈】
-1. 今天实际学习时长：
-2. 完成了哪些代码/文件：
-3. 哪个概念最清楚了：
-4. 哪个概念还没懂：
+1. 今天实际学习时长：3h
+2. 完成了哪些代码/文件：所有包括get_with_try()方法
+3. 哪个概念最清楚了：get，post
+4. 哪个概念还没懂：提到的GIL线程锁
 5. 卡住的 Bug / 报错全文：
-6. 自我验收题完成情况：
+6. 自我验收题完成情况：基本良好，后续可以看这个demo进行运用
 7. 明天希望：正常推进 / 放慢复习 / 加难扩展
 [Timestamp: 2026/06/11 10:32:03]
